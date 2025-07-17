@@ -30,6 +30,9 @@ for item in data['items']:
 
 df = pd.DataFrame(records)
 
+# Current UTC timestamp to insert in all rows
+data_loaded_at = datetime.utcnow()
+
 # Connect to Snowflake
 conn = snowflake.connector.connect(
     user=os.getenv("SNOWFLAKE_USER"),
@@ -41,12 +44,16 @@ conn = snowflake.connector.connect(
 )
 cursor = conn.cursor()
 
-# Insert data
+# Insert data with data_loaded_at timestamp
 for _, row in df.iterrows():
     cursor.execute("""
-        INSERT INTO YOUTUBE_TRENDING_RAW (video_id, title, published_at, category, views, likes, comments)
-        VALUES (%s, %s, %s, %s, %s, %s, %s)
-    """, (row.video_id, row.title, row.published_at, row.category, row.views, row.likes, row.comments))
+        INSERT INTO YOUTUBE_TRENDING_RAW 
+        (video_id, title, published_at, category, views, likes, comments, data_loaded_at)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+    """, (
+        row.video_id, row.title, row.published_at, row.category,
+        row.views, row.likes, row.comments, data_loaded_at
+    ))
 
 cursor.close()
 conn.close()
