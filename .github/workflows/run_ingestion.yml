@@ -31,4 +31,4 @@ jobs:
           echo "SNOWFLAKE_ACCOUNT=${{ secrets.SNOWFLAKE_ACCOUNT }}" >> .env
 
       - name: Run ingestion script
-        run: python ingestion/fetch_and_load_youtube.py
+        run: python ingestion/run_scripts.py
