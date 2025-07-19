@@ -20,3 +20,47 @@ YouTube API → Raw Data (Snowflake RAW schema)
 → Category Data (Snowflake DIM schema)
 → Enriched Data (Snowflake TRANSFORMED schema)
 → Power BI Dashboard
+
+---
+
+## Prerequisites
+- Python 3.x
+- Snowflake account with proper access and warehouse
+- YouTube Data API key
+- Power BI Desktop
+- `.env` file with the following variables:
+
+YOUTUBE_API_KEY=your_youtube_api_key
+SNOWFLAKE_USER=your_snowflake_user
+SNOWFLAKE_PASSWORD=your_snowflake_password
+SNOWFLAKE_ACCOUNT=your_snowflake_account
+
+
+---
+
+## Installation & Setup
+
+1. Clone this repo:
+git clone https://github.com/yourusername/youtube-trending-pipeline.git
+cd youtube-trending-pipeline
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate       # On Windows: venv\Scripts\activate
+
+3. Install dependencies:
+pip install -r requirements.txt
+
+---
+
+##Usage
+
+1. Fetch Raw YouTube Trending Data
+python script1_raw_data.py
+
+
+
+
+
+
