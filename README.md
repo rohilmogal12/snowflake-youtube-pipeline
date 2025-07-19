@@ -54,7 +54,7 @@ pip install -r requirements.txt
 
 ---
 
-##Usage
+## Usage
 
 1. Fetch Raw YouTube Trending Data
 python script1_raw_data.py
