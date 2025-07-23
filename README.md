@@ -79,6 +79,10 @@ python script2_categories.py
 ```bash
 python script_3_transform_enrich.py
 ```
+### 4. 🔄 All-in-one run script to run all the scripts above automatically
+```bash
+python run_scripts.py
+```
 
 ### 4. 📊 Visualize in Power BI
 - Connect to the `YOUTUBE_DB.TRANSFORMED.YOUTUBE_TRENDING_ENRICHED` table
