@@ -16,6 +16,9 @@ This project builds an end-to-end data pipeline that extracts YouTube trending v
 
 ## 🧱 Architecture
 
+
+
+![Data Pipeline Diagram](./diagram.png)
 ```
 YouTube API → Raw Data (Snowflake RAW schema)
          → Category Data (Snowflake DIM schema)
