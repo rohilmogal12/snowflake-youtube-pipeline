@@ -1,20 +1,20 @@
-# YouTube Trending Data Pipeline & Dashboard
+# 📊 YouTube Trending Data Pipeline & Dashboard
 
-## Overview
+## 🌟 Overview
 This project builds an end-to-end data pipeline that extracts YouTube trending video data from the YouTube Data API, enriches it with category metadata, stores it in Snowflake, and visualizes key insights using Power BI.
 
 ---
 
-## Features
-- **Data Ingestion:** Fetches trending videos and category metadata from YouTube API.
-- **Data Storage:** Raw and dimension data stored in Snowflake tables.
-- **Data Transformation:** Enriches raw video data by joining with category mappings.
-- **Visualization:** Interactive Power BI dashboard showcasing video trends, engagement metrics, and category insights.
-- **Automation Ready:** Modular Python scripts enable easy scheduling and automation.
+## 🚀 Features
+- 📥 **Data Ingestion:** Fetches trending videos and category metadata from YouTube API.
+- ❄️ **Data Storage:** Raw and dimension data stored in Snowflake tables.
+- 🧪 **Data Transformation:** Enriches raw video data by joining with category mappings.
+- 📈 **Visualization:** Interactive Power BI dashboard showcasing video trends, engagement metrics, and category insights.
+- ⚙️ **Automation Ready:** Modular Python scripts enable easy scheduling and automation.
 
 ---
 
-## Architecture
+## 🧱 Architecture
 
 ```
 YouTube API → Raw Data (Snowflake RAW schema)
@@ -25,7 +25,7 @@ YouTube API → Raw Data (Snowflake RAW schema)
 
 ---
 
-## Prerequisites
+## 🧰 Prerequisites
 - Python 3.x
 - Snowflake account with proper access and warehouse
 - YouTube Data API key
@@ -40,7 +40,7 @@ YouTube API → Raw Data (Snowflake RAW schema)
 
 ---
 
-## Installation & Setup
+## ⚙️ Installation & Setup
 
 1. Clone this repo:
    ```
@@ -63,33 +63,30 @@ YouTube API → Raw Data (Snowflake RAW schema)
 
 ---
 
-## Usage
+## 🧪 Usage
 
-### 1. Fetch Raw YouTube Trending Data
-
+### 1. 📥 Fetch Raw YouTube Trending Data
 ```bash
 python script1_raw_data.py
 ```
 
-### 2. Fetch & Load Category Metadata
-
+### 2. 📂 Fetch & Load Category Metadata
 ```bash
 python script2_categories.py
 ```
 
-### 3. Enrich Raw Data with Category Names
-
+### 3. 🔄 Enrich Raw Data with Category Names
 ```bash
 python script_3_transform_enrich.py
 ```
 
-### 4. Open Power BI Desktop and connect to Snowflake
+### 4. 📊 Visualize in Power BI
 - Connect to the `YOUTUBE_DB.TRANSFORMED.YOUTUBE_TRENDING_ENRICHED` table
 - Build or use the provided Power BI report file to visualize insights
 
 ---
 
-## Power BI Dashboard Highlights
+## 📌 Power BI Dashboard Highlights
 - Total videos, views, average engagement
 - Top trending videos with engagement metrics
 - Category-wise performance analysis
@@ -97,20 +94,20 @@ python script_3_transform_enrich.py
 
 ---
 
-## Future Improvements
+## 🔮 Future Improvements
 - Automate the pipeline with Airflow or other orchestration tools
 - Add sentiment analysis on comments using NLP
 - Enhance dashboard with predictive analytics
 
 ---
 
-## License
+## 📄 License
 MIT License
 
 ---
 
-## Contact
-Rohil Mogal  
-Email: rohilmogal12@gmail.com  
-Portfolio: [rohilytics.github.io/my-portfolio](https://rohilytics.github.io/my-portfolio)  
-LinkedIn: [linkedin.com/in/rohilmogal](https://linkedin.com/in/rohilmogal)
+## 👤 Contact
+**Rohil Mogal**  
+📧 Email: rohilmogal12@gmail.com  
+🌐 Portfolio: [rohilytics.github.io/my-portfolio](https://rohilytics.github.io/my-portfolio)  
+💼 LinkedIn: [linkedin.com/in/rohilmogal](https://linkedin.com/in/rohilmogal)
