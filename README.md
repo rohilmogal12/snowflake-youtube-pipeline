@@ -67,17 +67,17 @@ YouTube API → Raw Data (Snowflake RAW schema)
 
 ### 1. 📥 Fetch Raw YouTube Trending Data
 ```bash
-python script1_raw_data.py
+python script_1_fetch_and_load_youtube.py
 ```
 
 ### 2. 📂 Fetch & Load Category Metadata
 ```bash
-python script2_categories.py
+python fetch_and_load_yt_categories.py
 ```
 
 ### 3. 🔄 Enrich Raw Data with Category Names
 ```bash
-python script_3_transform_enrich.py
+python script_2_transform_enrich
 ```
 ### 4. 🔄 All-in-one run script to run all the scripts above automatically
 ```bash
