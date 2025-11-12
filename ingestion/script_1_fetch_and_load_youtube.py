@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 import snowflake.connector
-from datetime import datetime
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 import os
 
@@ -31,7 +31,7 @@ for item in data['items']:
 df = pd.DataFrame(records)
 
 # Current UTC timestamp to insert in all rows
-data_loaded_at = datetime.utcnow()
+data_loaded_at = datetime.now(timezone.utc)
 
 # Connect to Snowflake
 conn = snowflake.connector.connect(
